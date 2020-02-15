@@ -1,0 +1,43 @@
+#:kivy 1.8.0
+
+<MainPanel>:
+    size_hint: .5, .5
+    pos_hint: {'center_x': .5, 'bottom_y': .5}
+    do_default_tab: False
+    tab_pos: 'bottom_mid'
+    tab_width: root.width / 2
+
+    TabbedPanelItem:
+        text: 'Home'
+
+        Accordion:
+            orientation: 'vertical'
+
+            AccordionItem:
+                title: 'Actions'
+                Label:
+                    text: 'Action list area'
+
+            AccordionItem:
+                title: 'Accept Invitation'
+                Label:
+                    text: 'Invitation area'
+
+    TabbedPanelItem:
+        text: 'Wallet'
+
+        TabbedPanel:
+            do_default_tab: False
+            tab_pos: 'top_mid'
+            tab_width: root.width / 2
+
+            TabbedPanelItem:
+                text: 'Credentials'
+                Label:
+                    text: 'Credential list area'
+
+            TabbedPanelItem:
+                text: 'Connections'
+                Label:
+                    text: 'Connection list area'
+
