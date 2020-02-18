@@ -1,7 +1,7 @@
 #:kivy 1.8.0
 
 <MainPanel>:
-    size_hint: .5, .5
+    size_hint: .5, 1
     pos_hint: {'center_x': .5, 'bottom_y': .5}
     do_default_tab: False
     tab_pos: 'bottom_mid'
@@ -15,6 +15,7 @@
 
             AccordionItem:
                 title: 'Actions'
+                collapse: False
                 Label:
                     text: 'Action list area'
 
